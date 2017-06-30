@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "system",
+        "target": "es6",
+        "noImplicitAny": true,
+        "sourceMap": true,
+        "outFile": "lib/game.js",
+        "removeComments": true
+    },
+    "include": [
+        "js/*.ts"
+    ],
+    "exclude": [
+        "js/index.ts"
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "physicsSettings": {
+        "gravity": {
+            "x": 0,
+            "y": 1
+        }
+    },
+    "images": {
+        "test": {
+            "width": 512,
+            "height": 512,
+            "xseg": 8,
+            "yseg": 8,
+            "url": "img/test.png",
+            "animationSets": {
+                "idle": {
+                    "startIndex": 0,
+                    "endIndex": 63,
+                    "frameRate": 5,
+                    "startRandom": true
+                }
+            }
+        },
+        "alert": {
+            "width": 128,
+            "height": 64,
+            "xseg": 8,
+            "yseg": 4,
+            "url": "img/alert.png",
+            "animationSets": {
+                "idle": {
+                    "startIndex": 0,
+                    "endIndex": 26,
+                    "frameRate": 5,
+                    "startRandom": true
+                }
+            }
+        }
+    }
+}
