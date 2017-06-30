@@ -4,6 +4,7 @@
 namespace Vidya {
     export interface IGameSettings {
         physicsSettings: Vidya.Physics.IPhysicsSettings,
+        playerSettings: Vidya.Entity.IPlayerSettings,
         images: {[name: string]: Vidya.Graphics.IImage}
     }
 
@@ -52,15 +53,9 @@ namespace Vidya {
                     this.images[imageName].bitmap = imageBitmaps[imageName];
                 }
 
-                let entity: Vidya.Entity.Sprite;
-                var w = 10;
-                var h = 10;
-                var n = w*h;
-                for (var i = 0; i < n; i++) {
-                    entity = new Vidya.Entity.Sprite(new Vidya.Physics.Point(Math.floor(Math.random() * this.entityCanvas.clientWidth), Math.floor(Math.random() * this.entityCanvas.clientHeight)), this.images['test'])
-                    entity.setGravityEnabled(false);
-                    this.entities.push(entity);
-                }
+                var player = new Vidya.Entity.Player(settings.playerSettings, this.images[settings.playerSettings.imageName]);
+                this.entities.push(player);
+
                 requestAnimationFrame(this.refresh);
             });
         }
