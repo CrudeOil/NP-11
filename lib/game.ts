@@ -56,6 +56,9 @@ namespace Vidya {
                 var player = new Vidya.Entity.Player(settings.playerSettings, this.images[settings.playerSettings.imageName]);
                 this.entities.push(player);
 
+                var wall = new Vidya.Entity.Wall(new Vidya.Physics.Point(10, 300), 500, 20);
+                this.entities.push(wall);
+
                 requestAnimationFrame(this.refresh);
             });
         }
